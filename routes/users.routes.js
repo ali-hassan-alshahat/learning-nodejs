@@ -6,7 +6,6 @@ const verifyToken = require("../middleware/verifyToken");
 const appError = require("../utils/appError");
 const diskStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    console.log(file);
     cb(null, "uploads");
   },
   filename: (req, file, cb) => {
